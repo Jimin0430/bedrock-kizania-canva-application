@@ -169,6 +169,7 @@ function buildConfig({
     },
     plugins: [
       new DefinePlugin({
+        "process.env": JSON.stringify(process.env),
         BACKEND_HOST: JSON.stringify(backendHost),
       }),
       // Apps can only submit a single JS file via the developer portal
